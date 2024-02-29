@@ -1,7 +1,7 @@
 import React,  {useEffect, useRef, useState} from "react";
 import './navbar.css'
 import gsap from 'gsap';
-import {Power3} from 'gsap'
+
 import { About, Resume, Portfolio, Blog, Contact } from "../../pages";
 
 const Navbar = ()=>{
@@ -50,52 +50,52 @@ const Navbar = ()=>{
         showz.current.classList="showresume"
         gsap.fromTo([showz.current, statez.current], 
         { y:"100vh"}, { y:"0", display:"flex",
-        duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+        duration:0.7, transformOrigin:'left', delay:0.5,
         stagger:{amount:1}})
         };
     const closing = ()=>{
         gsap.fromTo([ statez.current, showz.current ], 
             { y:"0vh"}, { y:"100vh", display:"none",
-            duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+            duration:0.7, transformOrigin:'left', delay:0.5,
             stagger:{amount:1}})
         };
     const showPort = ()=>{
         port.current.classList="portshow"
         gsap.fromTo([port.current, ports.current], 
         { y:"100vh"}, { y:"0", display:"flex",
-        duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+        duration:0.7, transformOrigin:'left', delay:0.5,
         stagger:{amount:1}})
         };
     const closePort = ()=>{
         gsap.fromTo([ ports.current, port.current ], 
             { y:"0vh"}, { y:"100vh",  display:"none",
-            duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+            duration:0.7, transformOrigin:'left', delay:0.5,
             stagger:{amount:1}})
         };
     const showBlog = ()=>{
         blog.current.classList="showblog"
         gsap.fromTo([blog.current, blogIn.current], 
         { y:"100vh"}, { y:"0", display:"flex",
-        duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+        duration:0.7, transformOrigin:'left', delay:0.5,
         stagger:{amount:1}})
         };
     const closeBlog = ()=>{
         gsap.fromTo([ blogIn.current, blog.current ], 
             { y:"0vh"}, { y:"100vh",  display:"none",
-            duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+            duration:0.7, transformOrigin:'left', delay:0.5,
             stagger:{amount:1}})
         };
     const showContact = ()=>{
         contact.current.classList="showcontact"
         gsap.fromTo([contact.current, contactIn.current], 
         { y:"100vh"}, { y:"0", display:"flex",
-        duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+        duration:0.7, transformOrigin:'left', delay:0.5,
         stagger:{amount:1}})
         };
     const closeContact = ()=>{
         gsap.fromTo([ contactIn.current, contact.current ], 
             { y:"0vh"}, { y:"100vh",  display:"none",
-            duration:0.7, ease:Power3.outIn, transformOrigin:'left', delay:0.5,
+            duration:0.7, transformOrigin:'left', delay:0.5,
             stagger:{amount:1}})
         };
     const [navies, setNavies] = useState(true);
@@ -119,7 +119,7 @@ const Navbar = ()=>{
             gsap.fromTo([ nodea.current, nodeb.current, 
                 nodec.current, noded.current, nodee.current], 
                 { opacity:0, y:"-5rem"}, { opacity:1, y:"0rem",
-              duration:2.5, ease:Power3.outIn, transformOrigin:'left', delay:2.5,
+              duration:2.5, transformOrigin:'left', delay:2.5,
               stagger:{amount:1}})
       
         }
@@ -127,7 +127,7 @@ const Navbar = ()=>{
         gsap.fromTo([ nodea.current, nodeb.current, 
             nodec.current, noded.current, nodee.current], 
             { opacity:0, y:"-5rem"}, { opacity:1, y:"0rem",
-          duration:2.5, ease:Power3.outIn, transformOrigin:'left', delay:2.5,
+          duration:2.5, transformOrigin:'left', delay:2.5,
           stagger:{amount:1}})
   
        
@@ -138,14 +138,14 @@ const Navbar = ()=>{
         if(navies===true){
             gsap.fromTo([ nodea.current], 
                 { opacity:0, y:"-5rem"}, { opacity:1, y:"0rem",
-              duration:2.5, ease:Power3.outIn, transformOrigin:'left', delay:2.5,
+              duration:2.5, transformOrigin:'left', delay:2.5,
               stagger:{amount:1}})
       
         }
 
         gsap.fromTo([ nodea.current], 
             { opacity:0, y:"-5rem"}, { opacity:1, y:"0rem",
-          duration:2.5, ease:Power3.outIn, transformOrigin:'left', delay:2.5,
+          duration:2.5, transformOrigin:'left', delay:2.5,
           stagger:{amount:1}})
   
        
